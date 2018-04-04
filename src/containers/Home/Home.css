@@ -1,0 +1,61 @@
+.home {
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+    position: relative;
+    perspective: 800px;
+}
+
+.home__box {
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.home__box:hover {
+    animation: rotateToProjects 2s .1s ease-in-out forwards;
+    
+}
+
+.home__box figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card .front {
+    background: red;
+}
+.card .back {
+    background: blue;
+    /* transform: rotateY( 180deg ); */
+}
+/*   
+.card.flipped {
+    
+} */
+
+@keyframes rotateToProjects {
+    0% {
+    }
+    10% {
+        transform: scale(.7);
+    }
+    60% {
+        transform: rotateX( 180deg );
+    }
+    90% {
+        transform: scale(.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
